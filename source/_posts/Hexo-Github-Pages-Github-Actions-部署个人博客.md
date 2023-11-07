@@ -19,18 +19,18 @@ npm install
 ```
 ## 3、运行项目
 输入`hexo s`，然后打开`http://localhost:4000/`即可访问
-![](/img/Pasted%20image%2020231106161324.png)
-![](/img/Pasted%20image%2020231106161254.png)
+![](../img/Pasted%20image%2020231106161324.png)
+![](../img/Pasted%20image%2020231106161254.png)
 # 二、配置Github Pages
 # 1、新建仓库
 打开[github.com](https://github.com/)登录自己的账号后新建一个仓库，仓库名称**必须为`用户名.github.io`**
-![](/img/Pasted%20image%2020231106161842.png)![](/img/Pasted%20image%2020231107162634.png)
+![](../img/Pasted%20image%2020231106161842.png)![](../img/Pasted%20image%2020231107162634.png)
 输入`repository name`后直接创建即可。
 # 三、部署到Github Pages
 ## 方式一、使用Github Actions
 ### 1、设置部署方式
 设置Source 为 GitHub Actions
-![](/img/Pasted%20image%2020231107172939.png)
+![](../img/Pasted%20image%2020231107172939.png)
 ### 2、创建工作流文件
 在hexo目录下创建`.github/workflows/pages.yml`文件。
 - 其中的`branches`如果自己的分支不是`master`的需要修改为自己的分支名。
@@ -105,7 +105,7 @@ git push origin
 ```
 ### 4、查看部署情况
 打开`Github` 仓库可以看到工作流已经完成，此时打开`https://用户名.github.io`即可看到自己的博客。
-![](/img/Pasted%20image%2020231107173632.png)
+![](../img/Pasted%20image%2020231107173632.png)
 ## 方式二、使用`hexo-deployer-git`插件
 ### 1、安装部署插件
 ```
@@ -130,7 +130,7 @@ hexo clean && hexo d
 如果部署失败可能是因为git的ssh没有配置好，需要配置一下。
 ### 4、GithubPages设置
 打开刚刚创建的仓库，然后设置要显示的分支
-![](/img/Pasted%20image%2020231107163852.png)
+![](../img/Pasted%20image%2020231107163852.png)
 ### 5、打开网页查看效果
 浏览器输入`https://用户名.github.io`，将用户名换成自己的进行访问。
-![](/img/Pasted%20image%2020231107171041.png)
+![](../img/Pasted%20image%2020231107171041.png)
