@@ -13,8 +13,12 @@ tags:
 ```shell
 git clone https://github.com/blinkfox/hexo-theme-matery.git
 ```
-如果不想用`git clone`的方式，也可以直接下载下来后打开。
-
+如果需要将主题上传到`Github`，需要将其中的`.git`文件夹删除，如果删除后还能添加的话，可以尝试以下命令
+```
+git rm -r --cache themes/
+git add .
+```
+如果不想用`git clone`的方式，也可以直接下载下来后解压到`themes`中。
 ## 二、更换主题
 ### 1、修改配置文件
 在`_config,yml`中修改`theme`
