@@ -2,17 +2,18 @@
 title: Hexo+Github Pages + Github Actions 部署个人博客
 date: 2023-11-07 17:38:25
 tags:
+  - Hexo
 ---
 # 一、部署Hexo
 ## 1、安装Hexo
 在安装nodejs、和git的情况下，打开cmd，输入命令安装Hexo。
-```
+```Shell
 npm install -g hexo-cli
 ```
 ## 2、初始化项目
 在想要初始化项目的地方打开cmd，然后输入`hexo init xxx-blog` 以下命令，会自动生成一个新的文件夹。
 初始化后`cd xxx-blog`进入目录文件夹，`npm install`安装需要的依赖文件
-```
+```Shell
 hexo init xxx-blog
 cd xxx-blog
 npm install
@@ -35,7 +36,7 @@ npm install
 在hexo目录下创建`.github/workflows/pages.yml`文件。
 - 其中的`branches`如果自己的分支不是`master`的需要修改为自己的分支名。
 - `node-version`需要修改为自己的版本，可以使用命令`node --version`查看自己的版本。
-```
+```yml
 name: Pages
 
 on:
@@ -88,14 +89,14 @@ jobs:
 ### 3、添加文件然后部署
 使用`git` 将文件推送到服务端即可。
 若文件中没有.gitignore，需要先创建一下
-```
+```text
 node_modules/
 package-lock.json
 yarn.lock
 public/
 ```
 然后将文件推送到`github`仓库
-```
+```Shell
 # 添加修改文件到暂存区
 git add .
 # 提交
@@ -108,14 +109,14 @@ git push origin
 ![](../img/Pasted%20image%2020231107173632.png)
 ## 方式二、使用`hexo-deployer-git`插件
 ### 1、安装部署插件
-```
+```Shell
 npm install hexo-deployer-git --save
 ```
 ### 2、配置上传路径
 在`_config.yml`中配置：
 将其中的`<username>`替换成自己的即可
 
-```
+```yml
 deploy:  
   type: git  
   repo: https://github.com/<username>/<username>.github.io  
@@ -124,7 +125,7 @@ deploy:
 ```
 ### 3、部署
 在目录中输入以下命令：
-```
+```Shell
 hexo clean && hexo d
 ```
 如果部署失败可能是因为git的ssh没有配置好，需要配置一下。
