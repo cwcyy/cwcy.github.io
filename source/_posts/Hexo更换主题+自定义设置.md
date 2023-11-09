@@ -3,6 +3,7 @@ title: Hexo更换主题
 date: 2023-11-08 09:48:12
 tags:
   - Hexo
+categories: 博客
 ---
 ## 一、下载主题
 主题可以在[Themes | Hexo](https://hexo.io/themes/)中寻找，点击主题的标题可以进入对应的`Github`地址。

@@ -3,6 +3,7 @@ title: Hexo+Github Pages + Github Actions 部署个人博客
 date: 2023-11-07 17:38:25
 tags:
   - Hexo
+categories: 博客
 ---
 ## 一、部署Hexo
 ### 1、安装Hexo
